@@ -1,8 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+exports.__esModule = true;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -88,6 +86,10 @@ function receiveMessage(event) {
 
     if (message.sourceDomain.indexOf(_conf.CONSTANTS.MOCK_PROTOCOL) === 0 || message.sourceDomain.indexOf(_conf.CONSTANTS.FILE_PROTOCOL) === 0) {
         origin = message.sourceDomain;
+    }
+
+    if (message.sourceDomain.indexOf(_conf.CONSTANTS.ABOUT_PROTOCOL) === 0) {
+        origin = '*';
     }
 
     if (_global.global.receivedMessages.indexOf(message.id) === -1) {

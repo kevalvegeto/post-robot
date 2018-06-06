@@ -1,8 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+exports.__esModule = true;
 var CONSTANTS = exports.CONSTANTS = {
 
     POST_MESSAGE_TYPE: {
@@ -48,6 +46,7 @@ var CONSTANTS = exports.CONSTANTS = {
 
     MOCK_PROTOCOL: 'mock:',
     FILE_PROTOCOL: 'file:',
+    ABOUT_PROTOCOL: 'about:',
 
     BRIDGE_NAME_PREFIX: '__postrobot_bridge__',
     POSTROBOT_PROXY: '__postrobot_proxy__',

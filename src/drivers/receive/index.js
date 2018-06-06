@@ -82,6 +82,10 @@ export function receiveMessage(event : MessageEvent) {
         origin = message.sourceDomain;
     }
 
+    if (message.sourceDomain.indexOf(CONSTANTS.ABOUT_PROTOCOL) === 0) {
+        origin = '*';
+    }
+
     if (global.receivedMessages.indexOf(message.id) === -1) {
         global.receivedMessages.push(message.id);
     } else {
