@@ -53,7 +53,7 @@ SEND_MESSAGE_STRATEGIES[_conf.CONSTANTS.SEND_STRATEGIES.POST_MESSAGE] = function
     });
 
     domains.forEach(function (dom) {
-        return win.postMessage(serializedMessage, dom);
+        return win.postMessage(serializedMessage, dom === 'null' ? '*' : dom);
     });
 };
 

@@ -1654,7 +1654,7 @@
                     }
                     return 0 === dom.indexOf(_conf.CONSTANTS.FILE_PROTOCOL) ? _conf.CONSTANTS.WILDCARD : dom;
                 }).forEach(function(dom) {
-                    return win.postMessage(serializedMessage, dom);
+                    return win.postMessage(serializedMessage, "null" === dom ? "*" : dom);
                 });
             };
         },

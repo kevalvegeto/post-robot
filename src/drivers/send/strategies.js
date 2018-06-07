@@ -51,7 +51,7 @@ SEND_MESSAGE_STRATEGIES[CONSTANTS.SEND_STRATEGIES.POST_MESSAGE] = (win : CrossDo
     });
 
     domains.forEach(dom => {
-        return win.postMessage(serializedMessage, dom);
+        return win.postMessage(serializedMessage, dom === 'null' ? '*' : dom);
     });
 };
 
